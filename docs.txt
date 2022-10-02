@@ -1,0 +1,40 @@
+ASSEMBLY ARCHITECTURE
+
+01 NN NN lda <addr>
+11 NN NN ldb <addr>
+12 NN NN ldc <addr>
+13 NN NN ldd <addr>
+14 NN NN ldh <addr>
+15 NN NN ldl <addr>
+02 NN NN lia <val>
+21 NN NN lib <val>
+22 NN NN lic <val>
+23 NN NN lid <val>
+24 NN NN lih <val>
+25 NN NN lil <val>
+03 00 00 add
+31 00 00 sub
+32 00 00 div
+33 00 00 mul
+34 00 NN dec <reg>
+35 00 NN inc <reg>
+04 NN NN jmp <addr>
+41 NN NN jnz <addr>
+42 NN NN jz  <addr>
+43 NN NN jeq <addr>
+44 NN NN jne <addr>
+45 NN NN jgt <addr>
+46 NN NN jlt <addr>
+47 NN NN jge <addr>
+48 NN NN jle <addr>
+05 NN NN sta <addr>
+51 NN NN stb <addr>
+52 NN NN stc <addr>
+53 NN NN std <addr>
+54 NN NN sth <addr>
+55 NN NN stl <addr>
+56 NN NN ste <addr>
+06 00 00 hlt
+07 NN NN cmp <reg/reg>
+71 00 NN czr <reg> // checks if the register's value is 0
+08 NN NN mov <reg/reg>
