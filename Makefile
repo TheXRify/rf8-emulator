@@ -1,5 +1,8 @@
-build:
-	clang $(wildcard ./src/*.c) -I./include -o ./bin/em.exe
+RUN ?=
+
+buildall:
+	make -C ./emulator build
+	make -C ./disassembler build
 
 run:
-	./bin/em.exe
+	make -C ./$(RUN) run
