@@ -44,6 +44,10 @@ int main(int argc, char** argv) {
 
     // read the file contents into a buffer.
     FILE* file = fopen(argv[1], "r");
+    if(!file) {
+        printf("Could not find the file specified!\n");
+        return -1;
+    }
 
     // get file size
     fseek(file, 0l, SEEK_END);
