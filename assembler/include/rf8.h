@@ -16,7 +16,7 @@ typedef enum tokentype {
     COMMENT,
     BQUOTE, EQUOTE,
     BDBLQUOTE, EDBLQUOTE,
-    
+    REGISTER
 } tokentype_t;
 
 typedef struct token {
@@ -24,6 +24,7 @@ typedef struct token {
     union {
         char* str;
         int integer;
+        char chr;
     } value;
 } token_t;
 
